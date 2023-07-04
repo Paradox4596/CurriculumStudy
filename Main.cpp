@@ -218,3 +218,5 @@ int main()
 
 	Print(array, ARRAY_SIZE);
 }
+
+//커밋 오류 수정 확인용
