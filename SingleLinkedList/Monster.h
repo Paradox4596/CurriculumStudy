@@ -5,7 +5,7 @@ const int NAME_LENGTH{ 10 };
 struct Monster
 {
 	char name[NAME_LENGTH]{};
-	int hp;
+	int hp{};
 
-	Monster* pNext;
+	Monster* pNext{};
 };

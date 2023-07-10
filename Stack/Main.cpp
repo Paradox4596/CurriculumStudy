@@ -6,7 +6,7 @@ const int STACK_SIZE{ 10 };
 
 enum Command // 상수보다 더 사용하기 좋음
 {
-	PUSH = 1,
+	PUSH = 1, // 1~3배정한 이유를 생각해봐야할듯
 	POP = 2,
 	QUIT = 3
 };
@@ -27,7 +27,7 @@ void PrintInfo()
 	   std::cout << "[3] quit" << std::endl;
 }
 
-void PrintStack(Stack& stack)
+void PrintStack(Stack& stack) // 참조형
 {
 	std::cout << "---- stack ----" << std::endl;
 
@@ -35,12 +35,12 @@ void PrintStack(Stack& stack)
 	if (stack.topIndex < 0)
 	{
 		std::cout << "Empty!!" << std::endl;
-		return;
+		return; // 주의!
 	}
 
 	for (int i = stack.topIndex; i >= 0; i--) //for문의 순서중요! 왼쪽 위부터 오른쪽 으로 1,2,4 다음줄은 3 순서임
 	{
-		std::cout << stack.container[i] << std::endl;
+		std::cout << stack.container[i] << std::endl; // 뒤의 값부터 앞으로 오면서 위부터 아래로 쭈욱 출력
 	}
 
 	std::cout << "---------------" << std::endl;
@@ -52,7 +52,7 @@ void Push(Stack& stack, int value)
 	if (stack.topIndex >= STACK_SIZE - 1)
 	{
 		std::cout << "Stack is FULL!!" << std::endl;
-		return;
+		return; // 주의!
 	}
 
 	stack.container[++stack.topIndex] = value;
@@ -72,13 +72,13 @@ void Pop(Stack& stack)
 
 int main()
 {
-	Stack myStack;
+	Stack myStack; // ??
 
 	PrintInfo();
 
-	int command{};
+	int command{}; // ??..!
 
-	while (true)
+	while (true) // ??..!
 	{
 		PrintStack(myStack);
 

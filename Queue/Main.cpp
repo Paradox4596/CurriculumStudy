@@ -36,14 +36,14 @@ void PrintQueue(Queue& queue)
 
 	if (queue.head == queue.tail)
 	{
-		std::cout << "Empty" << std::endl;
+		std::cout << "Empty!" << std::endl;
 		return;
 	}
 
 	while (i != queue.tail)
 	{
 		i = (i + 1) % QUEUE_SIZE; // 헤드 다음부터 출력
-		std::cout << queue.container[i] << " ";
+		std::cout << queue.container[i] << " " << std::endl;
 	}
 
 	std::cout << "--------" << std::endl;
@@ -65,7 +65,7 @@ void DeQueue(Queue& queue)
 {
 	if (queue.head == queue.tail)
 	{
-		std::cout << "QUEUE is already Empty" << std::endl;
+		std::cout << "QUEUE is already Empty!" << std::endl;
 		return;
 	}
 
