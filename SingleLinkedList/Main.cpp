@@ -23,5 +23,9 @@ int main()
 		std::cout << "Not Found!" << std::endl;
 	}
 
+
+	DeleteMonster(myList, "Slime");
+	PrintMonsters(myList);
+
 	DeleteAll(myList);
 }
