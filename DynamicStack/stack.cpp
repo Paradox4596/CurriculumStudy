@@ -12,6 +12,7 @@ void PushDS(Stack& stack, int value)
 	stack.count++;
 }
 
+
 void PopDS(Stack& stack)
 {
 	if (stack.count == 0) // 원소가 1개일땐 상관없지만 원소가 0개일때 빼는게 문제가 되므로
@@ -25,6 +26,7 @@ void PopDS(Stack& stack)
 	delete pPrevTop;
 }
 
+
 void PrintDS(Stack& stack)
 {
 	Element* pElement = stack.pTop;
@@ -36,18 +38,20 @@ void PrintDS(Stack& stack)
 	}
 }
 
+
 void DeleteAllDS(Stack& stack)
 {
 	Element* pElement = stack.pTop;
-	Element* pNext{};
+	Element* pNext;
 
 	while (pElement)
 	{
 		pNext = pElement->pNext;
 		delete pElement;
 		pElement = pNext;
-
-		stack.count = 0;
-		stack.pTop = 0; // 이 지점 수정 필요한듯
 	}
+
+	stack.count = 0;
+	stack.pTop = nullptr;
+	
 }

@@ -12,12 +12,9 @@ int main()
 
 	PopDS(myStack);
 	PrintDS(myStack);
-	PopDS(myStack);
-	PrintDS(myStack);
-	PopDS(myStack);
-	PrintDS(myStack);
-
-	PopDS(myStack);
 
 	DeleteAllDS(myStack);
+	PrintDS(myStack);
+
+	PopDS(myStack);
 }
